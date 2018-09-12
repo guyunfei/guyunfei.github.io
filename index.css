@@ -1,3 +1,6 @@
+::-webkit-scrollbar{
+    display:none;
+  }
 * {
     padding: 0;
     margin: 0;
@@ -55,4 +58,11 @@ html,body {
 }
 .module-info {
     border-top: 2px black dashed;
+    padding: 10px 10px 0 20px;
+}
+.module-info-main {
+    line-height: 1.5em;
+}
+.module-info-sub {
+    color: grey;
 }
