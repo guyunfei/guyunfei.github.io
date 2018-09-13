@@ -4,6 +4,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 .h3,.h4 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -24,18 +25,28 @@ html,body {
     width: 100%;
     height: 100%;
 }
+@media screen and (max-width:108px) {
+    #left-info {
+        width: 150px;
+    }
+    #right-content {
+        margin-left: 160px;
+    }
+    .slim-hidden {
+        display: none;
+    }
+}
 #left-info {
     float: left;
     width: 260px;
     height: 100%;    
-    background-color: cadetblue;
+    background-image:url(http://pexl8uosh.bkt.clouddn.com/picture.png);
     overflow:auto;
 }
-.left-container {
-    position: fixed;
+ .left-container {
+    /* position: fixed; */
     padding: 30px;
-
-}
+} 
 .img-container {
     padding: 20px;
     text-align: center;
@@ -48,7 +59,7 @@ html,body {
 #right-content {
     margin-left: 280px;
     height: 100%;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
     overflow: scroll;
 }
 .module-title {
@@ -57,11 +68,11 @@ html,body {
     padding: 30px 0 10px;
 }
 .module-info {
-    border-top: 2px black dashed;
-    padding: 10px 10px 0 20px;
+    /* border-top: 2px black dashed; */
+    padding: 10px 10px 0 10px;
 }
 .module-info-main {
-    line-height: 1.5em;
+    line-height: 18px;
 }
 .module-info-sub {
     color: grey;
