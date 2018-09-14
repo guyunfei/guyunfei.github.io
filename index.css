@@ -32,9 +32,9 @@ html,body {
     #right-content {
         margin-left: 160px;
     }
-    .slim-hidden {
+    /* .slim-hidden {
         display: none;
-    }
+    } */
 }
 #left-info {
     float: left;
@@ -70,6 +70,14 @@ html,body {
 .module-info {
     /* border-top: 2px black dashed; */
     padding: 10px 10px 0 10px;
+}
+.badge {
+    display:inline;
+    border: 1px solid rgb(170,184,163);
+    border-radius: 4px;
+    background-color:rgb(237,237,237);
+    margin: 0 5px;
+    word-break: break-all;
 }
 .module-info-main {
     line-height: 18px;
