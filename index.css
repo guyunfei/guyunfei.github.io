@@ -25,18 +25,8 @@ html,body {
     width: 100%;
     height: 100%;
 }
-@media screen and (max-width:108px) {
-    #left-info {
-        width: 150px;
-    }
-    #right-content {
-        margin-left: 160px;
-    }
-    /* .slim-hidden {
-        display: none;
-    } */
-}
-#left-info {
+
+.left-info {
     float: left;
     width: 260px;
     height: 100%;    
@@ -56,11 +46,35 @@ html,body {
     margin-bottom: 36px;
     bottom: 0;
 }
-#right-content {
+.right-content {
     margin-left: 280px;
     height: 100%;
     /* background-color: blanchedalmond; */
     overflow: scroll;
+}
+
+@media screen and (max-width:800px) {
+    .left-info {
+        float: left;
+        width: 150px;
+        height: 100%;
+    }
+    .left-container {
+        padding: 0;
+    }
+    .img-container {
+        padding: 0;
+        text-align: left;
+    }
+    .img-container img {
+        width: 150px;;
+    }
+    .right-content {
+        margin-left: 160px;
+    }
+    .slim-hidden {
+        display: none;
+    }
 }
 .module-title {
     font-size: 20px;
