@@ -4,6 +4,7 @@
 * {
     padding: 0;
     margin: 0;
+    color:#333;
     font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 .h3,.h4 {
@@ -30,20 +31,24 @@ html,body {
     float: left;
     width: 260px;
     height: 100%;    
-    background-image:url(http://pexl8uosh.bkt.clouddn.com/picture.png);
+    background-image:url(https://personal-1258400017.cos.ap-shanghai.myqcloud.com/back.png);
     overflow:auto;
 }
  .left-container {
     /* position: fixed; */
     padding: 30px;
 } 
+.info-name {
+    color: indianred;
+    background-color: white;
+}
 .img-container {
     padding: 20px;
     text-align: center;
 }
 .motto {
     position: fixed;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
     bottom: 0;
     word-break: break-all;
 }
