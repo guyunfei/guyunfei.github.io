@@ -7,16 +7,31 @@
     <title>About Myself</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <script src="main.js"></script>
+    <script>
+        function changeline() {
+            var targets = document.getElementsByTagName('div');
+            for (i = 6; i < targets.length; i++) {
+                targets[i].style.lineHeight = '28px';
+            }
+        }
+        function recoverline() {
+            var targets = document.getElementsByTagName('div');
+            for (i = 6; i < targets.length; i++) {
+                targets[i].style.lineHeight = '24px';
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body onbeforeprint="changeline()" onafterprint="recoverline()">
 
     <!-- <div class="box">Hello Box</div> -->
     <div id="container">
         <div class="left-info">
             <div class="left-container">
-                <div class="info-name"> <h2>顾云飞<span class="h3 slim-hidden">(Gu yunfei)</span></h2></div>
+                <div class="info-name">
+                    <h2>顾云飞<span class="h3 slim-hidden">(Gu yunfei)</span></h2>
+                </div>
                 <br>
                 <hr style="color: indianred">
                 <div>
@@ -25,13 +40,13 @@
                     </div>
                 </div>
                 <p class="h4 ">男&nbsp;&nbsp; 1994年7月</p>
-                <p class="h4 ">本科 &nbsp; 毕业一年</p>
+                <p class="h4 ">本科 &nbsp; 2017年毕业</p>
                 <p class="h4">18857119625</p>
-                <p class="h4">loggyf@163.com</p>
-                <p class="h4 ">Java </p>
-
-                <p class="motto">Nothing is impossible <br> &nbsp;&nbsp;&nbsp;&nbsp;to a willing mind. <br><br> https://guyunfei.github.io </p>
-
+                <p class="h4">guyunfei@zoho.com.cn</p>
+                <p class="h4 ">Python / Java </p>
+                <p class="h4 ">随时到岗 </p>
+                <p class="motto">Nothing is impossible <br> &nbsp;&nbsp;&nbsp;&nbsp;to a willing mind. <br><br>
+                    https://guyunfei.github.io </p>
             </div>
         </div>
         <div class="right-content">
@@ -40,12 +55,13 @@
                 <div class="module-title">教育经历<span class="slim-hidden">(Education Experience)</span></div>
                 <div class="module-info">
                     <div class="module-info-main"> 2013年9月 —— 2017年6月 杭州师范大学 软件工程</div>
-                    <p class="haha"><span class="badge">中级软件设计师</span><span class="badge">优秀毕业生</span><span class="badge">英语四级</span></p>
+                    <p class="haha"><span class="badge">软件设计师(中级)</span><span class="badge">优秀毕业生</span><span
+                            class="badge">英语四级</span></p>
 
                     <br>主修课程：软件工程 面向对象程序设计 web程序设计 数据结构 算法基础
                     软件架构 软件过程管理 软件测试 数据库系统 操作系统 计算机网络
                     <br>
-                    <div class="silm-hidden"> 副修课程：宏观经济学 微观经济学 统计学 会计基础 管理学 国际金融</div>
+                    <!-- <div class="silm-hidden"> 副修课程：宏观经济学 微观经济学 统计学 会计基础 管理学 国际金融</div> -->
 
                 </div>
             </div>
@@ -53,35 +69,53 @@
             <div class="module">
                 <div class="module-title">工作经历&项目经验<span class="slim-hidden">(Work&Project Experience)</span></div>
                 <div class="module-info">
-                    <ul>
-                        <li>杭州络格科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;总经理(自主创业)</li>使用<span
-                        class="badge"> Spring+Hibernate+Thymeleaf</span>的架构。<br>&nbsp;&nbsp; 开发一套包含人事管理、任务管理、库存管理、工资核算、数据统计等功能的信息化管理系统。
-                        <br><br>
-                        <li>杭州某高校后勤集团&nbsp;&nbsp;&nbsp;&nbsp; 网络运营</li>推进集团信息化建设 &nbsp;&nbsp;日常工作:编制软件需求分析, 软件测试及培训
-                        <br><br>
-                        <li>杭州弹友信息科技有限公司&nbsp;&nbsp;&nbsp;&nbsp; Java开发</li>独立担任微信小游戏后端开发，使用<span class="badge">SpringBoot</span>快速开发。<br>&nbsp;&nbsp;完成微信用户对接，角色购买，升级，兑换，红包，签到等游戏功能。总用户量近千人
-                    </ul>
+                    <div class="item">
+                        <div class="item-title">
+                            杭州络格科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;Java开发
+                        </div>
+                        <div class="item-content">
+                            使用<span class="badge">
+                                Spring+Hibernate+Thymeleaf</span>的架构。<br>开发一套包含人事管理、任务管理、库存管理、工资核算、数据统计等功能的信息化管理系统。
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-title">
+                            杭州弹友信息科技有限公司&nbsp;&nbsp;&nbsp;&nbsp; Java开发
+                        </div>
+                        <div class="item-content">
+                            使用<span
+                                class="badge">SpringBoot</span>快速开发。<br>独立担任微信小游戏后端开发，完成微信用户对接，角色购买，升级，兑换，红包，签到等游戏功能。总用户量近千人
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">
+                            杭州依图医疗技术有限公司&nbsp;&nbsp;&nbsp;&nbsp; Python 数据处理
+                        </div>
+                        <div class="item-content">
+                            使用<span class="badge">Numpy+Pandas</span> 进行数据处理,<span class="badge">ETL</span> <br> 使用<span
+                                class="badge">requests</span>进行网络爬虫<br>使用<span class="badge">Python</span>开发工具脚本
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            
-
-
             <div class="module">
                 <div class="module-title">工作技能<span class="slim-hidden">(Professional Skills)</span></div>
                 <div class="module-info">
                     <ul>
-                        <li>掌握<span class="badge"> Java基础</span>（包括集合类、I/O、多线程）</li>
-                        <li>熟悉<span class="badge">Java Web</span><span class="badge">Spring</span><span class="badge">SpringMVC</span><span
-                                class="badge">SpringDataJPA</span><span class="badge">Spring Security</span><span class="badge">Thymeleaf</span></li>
+                        <li>掌握<span class="badge"> Python基础</span>熟悉<span class="badge">Numpy</span><span
+                                class="badge">Pandas</span><span class="badge">requests</span><span
+                                class="badge">Flask</span>等
+                        <li>掌握<span class="badge"> Java基础</span>熟悉<span class="badge">Java Web</span><span
+                                class="badge">Spring</span><span class="badge">SpringMVC</span><span
+                                class="badge">SpringDataJPA</span><span class="badge">Spring Security</span><span
+                                class="badge">Thymeleaf</span></li>
                         <li>掌握数据库的设计，熟悉<span class="badge">MySQL</span></li>
-                        <li>熟悉常用的<span class="badge">设计模式</span></li>
-                        <li>熟悉<span class="badge">web前端技术</span>Html，CSS，jQuery，接触过<span class="badge">Angular</span></li>
+                        <li>熟悉<span class="badge">web前端技术</span>Html,CSS,jQuery,BootStrap
                         <li>了解<span class="badge">Linux</span>操作系统</li>
                         <li>熟悉<span class="badge">Maven</span> 构建环境，会使用<span class="badge">Git</span></li>
 
                     </ul>
-
                 </div>
             </div>
 
@@ -89,17 +123,12 @@
                 <div class="module-title">求职意向&工作规划<span class="slim-hidden">(Intension&Plan)</span> </div>
                 <div class="module-info">
                     <ul>
-                        <li>急寻一家市场前景好，公司规模大，技术过硬的公司</li>
+                        <li><span class="badge">python相关</span>工作</li>
+                        <li>接受加班，接受996</li>
                         <li>入职后将积极工作、踏实努力</li>
-                        <li>立志早日修炼为架构师</li>
                     </ul>
                 </div>
             </div>
-
-
-
-
-
         </div>
     </div>
 </body>
